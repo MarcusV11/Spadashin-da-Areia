@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cx0ks5bv8phpc"]
+
+[ext_resource type="Script" uid="uid://doij6670vqi2j" path="res://Scripts/barril.gd" id="1_6ibwx"]
+[ext_resource type="Texture2D" uid="uid://dr4uunmfhphep" path="res://Treasure Hunters/Merchant Ship/Sprites/Barrel/Idle/1.png" id="1_8xj1t"]
+[ext_resource type="Texture2D" uid="uid://cm8t6mu3t6oey" path="res://Treasure Hunters/Merchant Ship/Sprites/Barrel/Destroyed/1.png" id="3_lom41"]
+[ext_resource type="Texture2D" uid="uid://bphs35acvcold" path="res://Treasure Hunters/Merchant Ship/Sprites/Barrel/Destroyed/2.png" id="4_exvt2"]
+[ext_resource type="Texture2D" uid="uid://bqtj0iu7k11dh" path="res://Treasure Hunters/Merchant Ship/Sprites/Barrel/Destroyed/3.png" id="5_pvpi3"]
+[ext_resource type="Texture2D" uid="uid://bx6rt1gt1gisv" path="res://Treasure Hunters/Merchant Ship/Sprites/Barrel/Destroyed/4.png" id="6_t65g3"]
+[ext_resource type="Texture2D" uid="uid://bbbmav6i8tuw2" path="res://Treasure Hunters/Merchant Ship/Sprites/Barrel/Destroyed/5.png" id="7_qxode"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ibwx"]
+radius = 12.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t3n1c"]
+radius = 12.0
+
+[sub_resource type="Animation" id="Animation_22qr1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_8xj1t")]
+}
+
+[sub_resource type="Animation" id="Animation_beukb"]
+resource_name = "destruido"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_lom41"), ExtResource("4_exvt2"), ExtResource("5_pvpi3"), ExtResource("6_t65g3"), ExtResource("7_qxode")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ili2n"]
+_data = {
+&"RESET": SubResource("Animation_22qr1"),
+&"destruido": SubResource("Animation_beukb")
+}
+
+[node name="barril" type="RigidBody2D" unique_id=1985601449 groups=["barril"]]
+collision_layer = 16
+collision_mask = 5
+script = ExtResource("1_6ibwx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1074317008]
+position = Vector2(0, -2.3841858e-07)
+scale = Vector2(1.1923077, 1.2)
+texture = ExtResource("1_8xj1t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1704455827]
+shape = SubResource("CapsuleShape2D_6ibwx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1552427116]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=21985224]
+shape = SubResource("CapsuleShape2D_t3n1c")
+debug_color = Color(0.95265216, 0.20705816, 0.19286028, 0.41960785)
+
+[node name="Timer" type="Timer" parent="." unique_id=525400027]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1652389117]
+libraries/ = SubResource("AnimationLibrary_ili2n")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cbta2uvaqnsto"]
+
+[ext_resource type="Texture2D" uid="uid://beau56ax3s0ha" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 01.png" id="1_0uqs8"]
+[ext_resource type="Script" uid="uid://dajvx4g7pgcos" path="res://Scripts/baú.gd" id="1_wwuqo"]
+[ext_resource type="Texture2D" uid="uid://yay0lt58fxjm" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 02.png" id="2_wwuqo"]
+[ext_resource type="Texture2D" uid="uid://45krmkbdgxwm" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 03.png" id="3_wct04"]
+[ext_resource type="Texture2D" uid="uid://bc6pvfhifacab" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 04.png" id="4_dy2qe"]
+[ext_resource type="Texture2D" uid="uid://dedwpg108l8g0" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 05.png" id="5_ycehv"]
+[ext_resource type="Texture2D" uid="uid://b85i64v7a18dp" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 06.png" id="6_tjncj"]
+[ext_resource type="Texture2D" uid="uid://dukcphs7tx0x1" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 07.png" id="7_2f72p"]
+[ext_resource type="Texture2D" uid="uid://33em73ml3pwv" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 08.png" id="8_pbuge"]
+[ext_resource type="Texture2D" uid="uid://dgwi4x4pt5j76" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 09.png" id="9_imsab"]
+[ext_resource type="Texture2D" uid="uid://c5sb37ms50p6x" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 10.png" id="10_4kss7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwuqo"]
+size = Vector2(28, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i00pv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0uqs8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wwuqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wct04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dy2qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ycehv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tjncj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2f72p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pbuge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_imsab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4kss7")
+}],
+"loop": false,
+"name": &"open",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uqs8"]
+size = Vector2(22, 17)
+
+[node name="Baú" type="StaticBody2D" unique_id=1415778329 groups=["inimigo"]]
+collision_layer = 2
+script = ExtResource("1_wwuqo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=691177307]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=79881431]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_wwuqo")
+debug_color = Color(0.737601, 0.46872324, 0, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1237412154]
+sprite_frames = SubResource("SpriteFrames_i00pv")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879600029]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_0uqs8")
+
+[node name="Timer" type="Timer" parent="." unique_id=1950848064]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

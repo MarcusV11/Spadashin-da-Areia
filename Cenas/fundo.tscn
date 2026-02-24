@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b56ulcklk5jqg"]
+
+[ext_resource type="Texture2D" uid="uid://cu6aiyyca1fgu" path="res://Cenário/sky.png" id="1_tqn5r"]
+[ext_resource type="Texture2D" uid="uid://gfjt23xe2n7a" path="res://Cenário/sea.png" id="2_xnbuh"]
+[ext_resource type="Texture2D" uid="uid://ct44st3wtsvj7" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Water.png" id="3_wtfu0"]
+
+[node name="Fundo" type="ParallaxBackground" unique_id=88567253]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=976783630]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=1017323603]
+position = Vector2(583.5, 45.5)
+scale = Vector2(11.419642, 1.2993422)
+texture = ExtResource("1_tqn5r")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="." unique_id=12254016]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2" unique_id=1058311363]
+position = Vector2(583.25, 404.5921)
+scale = Vector2(11.424107, 3.366502)
+texture = ExtResource("2_xnbuh")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="." unique_id=340031047]
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3" unique_id=967589065]
+position = Vector2(581, 930)
+scale = Vector2(39.874996, 22.741503)
+texture = ExtResource("3_wtfu0")

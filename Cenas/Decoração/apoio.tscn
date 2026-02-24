@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://qxlq3apqa3r3"]
+
+[ext_resource type="Texture2D" uid="uid://c24f4mpglty5b" path="res://Treasure Hunters/Pirate Ship/Sprites/Tilesets/Platforms (32x32).png" id="1_4gle5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eaxqg"]
+atlas = ExtResource("1_4gle5")
+region = Rect2(0, 0, 192, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wgenp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eaxqg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r235x"]
+size = Vector2(127, 4)
+
+[node name="Apoio" type="AnimatedSprite2D" unique_id=2043603999]
+sprite_frames = SubResource("SpriteFrames_wgenp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1126972170]
+collision_layer = 4
+collision_mask = 19
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1463354000]
+position = Vector2(-0.5, 9)
+shape = SubResource("RectangleShape2D_r235x")

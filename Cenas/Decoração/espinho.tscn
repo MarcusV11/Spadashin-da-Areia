@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://1ppa8py374xt"]
+
+[ext_resource type="Texture2D" uid="uid://b0ogq2ai73ssy" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Spikes/Spikes.png" id="1_w6gt4"]
+[ext_resource type="Script" uid="uid://d666af7o1b5m" path="res://Scripts/Espinho.gd" id="2_aw4us"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mu30"]
+size = Vector2(28, 16)
+
+[sub_resource type="Animation" id="Animation_aw4us"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_iy0tj"]
+resource_name = "hit"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_w6gt4")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -20)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 8), Vector2(0, -12)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer:speed_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3s0ed"]
+_data = {
+&"RESET": SubResource("Animation_aw4us"),
+&"hit": SubResource("Animation_iy0tj")
+}
+
+[node name="Espinho" type="Area2D" unique_id=600250485 groups=["inimigo"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=485980417]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_4mu30")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1442246382]
+texture = ExtResource("1_w6gt4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=230469808]
+libraries/ = SubResource("AnimationLibrary_3s0ed")
+autoplay = &"hit"
+speed_scale = 0.3
+script = ExtResource("2_aw4us")
+
+[connection signal="body_entered" from="." to="AnimationPlayer" method="_on_espinho_body_entered"]

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cx5pj8l4dkjfr"]
+
+[ext_resource type="Script" uid="uid://oqimjg0siead" path="res://Scripts/melancia.gd" id="1_ty3yc"]
+[ext_resource type="Texture2D" uid="uid://bgmymwkt2s8cr" path="res://Fruits/Fruits/Fruits_Separated/Watermelon.png" id="1_yybbj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ty3yc"]
+size = Vector2(22, 12)
+
+[node name="Melancia" type="Area2D" unique_id=2107844054]
+script = ExtResource("1_ty3yc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=347247223]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_ty3yc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=526139910]
+position = Vector2(0, 1.0000005)
+scale = Vector2(0.6875, 0.65625)
+texture = ExtResource("1_yybbj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
