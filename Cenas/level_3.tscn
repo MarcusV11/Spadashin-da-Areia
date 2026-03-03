@@ -428,6 +428,7 @@ tile_map_data = PackedByteArray("AAApABAAAAABAAIAAAApAA8AAAABAAEAAAApAA4AAAABAAE
 tile_set = SubResource("TileSet_lenkr")
 
 [node name="Fundo 3" parent="." unique_id=506083069 instance=ExtResource("5_wrraf")]
+z_index = -5
 
 [node name="Decoração" type="Node2D" parent="." unique_id=1434998837]
 
@@ -520,7 +521,7 @@ position = Vector2(1135, 306)
 
 [node name="Corrimão2" parent="Decoração/Corrimãos" unique_id=662311980 instance=ExtResource("11_wrraf")]
 z_index = -1
-position = Vector2(1553, 593)
+position = Vector2(1553, 614)
 
 [node name="Corrimão3" parent="Decoração/Corrimãos" unique_id=955069535 instance=ExtResource("11_wrraf")]
 z_index = -1

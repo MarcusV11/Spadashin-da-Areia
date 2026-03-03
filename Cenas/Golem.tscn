@@ -294,7 +294,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvd7u"]
-size = Vector2(23, 18)
+size = Vector2(16.5, 21)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvd7u"]
 bg_color = Color(0.7209453, 0, 0.10059113, 1)
@@ -324,13 +324,13 @@ libraries/ = SubResource("AnimationLibrary_nbeu0")
 autoplay = &"run"
 
 [node name="Ray" type="RayCast2D" parent="." unique_id=1486978009]
-target_position = Vector2(-18, 0)
+target_position = Vector2(-20, 0)
 collision_mask = 4
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=155057187]
 
 [node name="Collision" type="CollisionShape2D" parent="AttackArea" unique_id=1662199761]
-position = Vector2(-4.5, 12)
+position = Vector2(14.75, 10.5)
 shape = SubResource("RectangleShape2D_yvd7u")
 debug_color = Color(0.95029134, 0.22556591, 0, 0.41960785)
 

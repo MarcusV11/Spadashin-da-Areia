@@ -1,70 +1,70 @@
 [gd_scene format=3 uid="uid://c4jfur271wdor"]
 
-[ext_resource type="Texture2D" uid="uid://cu6aiyyca1fgu" path="res://Cenário/sky.png" id="1_31dwp"]
-[ext_resource type="Texture2D" uid="uid://tavqgsb56dn4" path="res://Cenário/far-grounds.png" id="2_h55ee"]
-[ext_resource type="Texture2D" uid="uid://dtod5eoeqk1ml" path="res://Cenário/clouds.png" id="3_o0jdf"]
-[ext_resource type="Texture2D" uid="uid://gfjt23xe2n7a" path="res://Cenário/sea.png" id="4_b2ebi"]
-[ext_resource type="Texture2D" uid="uid://ct44st3wtsvj7" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Water.png" id="5_mjpdh"]
+[ext_resource type="Texture2D" uid="uid://ytmmkkaad6gm" path="res://Fundos/Ocean_7/1.png" id="1_h55ee"]
+[ext_resource type="Texture2D" uid="uid://bg0v4g2ljf3vk" path="res://Fundos/Ocean_7/2.png" id="2_o0jdf"]
+[ext_resource type="Texture2D" uid="uid://pv5nplh4m0mu" path="res://Fundos/Ocean_7/3.png" id="3_b2ebi"]
+[ext_resource type="Texture2D" uid="uid://bqupovh3jhe5o" path="res://Fundos/Ocean_7/4.png" id="4_mjpdh"]
+[ext_resource type="Texture2D" uid="uid://cdto1fa7x2dhd" path="res://Fundos/Ocean_7/5.png" id="6_0iem8"]
+[ext_resource type="Texture2D" uid="uid://ct44st3wtsvj7" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Water.png" id="6_h55ee"]
 
-[node name="Fundo 2" type="ParallaxBackground" unique_id=1777298372]
+[node name="Fundo 2" type="Node2D" unique_id=1845106291]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=1417490964]
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(1024, 0)
+[node name="ParallaxLayer" type="Parallax2D" parent="." unique_id=1549206373]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=1887151087]
-position = Vector2(572.5, 164.5)
-scale = Vector2(11.223214, 2.0822368)
-texture = ExtResource("1_31dwp")
+position = Vector2(266.00006, 327)
+scale = Vector2(2.1874995, 2.0617282)
+texture = ExtResource("1_h55ee")
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="." unique_id=1331699873]
-motion_scale = Vector2(0.4, 0.4)
-motion_mirroring = Vector2(1024, 0)
+[node name="ParallaxLayer2" type="Parallax2D" parent="." unique_id=1314032362]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2" unique_id=1019175152]
-position = Vector2(743.5, 264)
-scale = Vector2(1.1931818, 3.9454548)
-texture = ExtResource("2_h55ee")
+position = Vector2(305.00003, 461.99997)
+scale = Vector2(2.3174372, 2.8402805)
+texture = ExtResource("2_o0jdf")
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="." unique_id=1497869892]
-motion_scale = Vector2(0.5, 0.5)
-motion_mirroring = Vector2(1024, 0)
+[node name="ParallaxLayer3" type="Parallax2D" parent="." unique_id=1958485951]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3" unique_id=556239734]
-position = Vector2(134, 123)
-scale = Vector2(0.5264245, 0.4555085)
-texture = ExtResource("3_o0jdf")
+position = Vector2(-477, -172.99998)
+scale = Vector2(5.1944447, 3.0462966)
+texture = ExtResource("3_b2ebi")
 
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="." unique_id=1471518807]
-motion_scale = Vector2(0.6, 0.6)
-motion_mirroring = Vector2(1024, 0)
+[node name="ParallaxLayer4" type="Parallax2D" parent="." unique_id=1796058599]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4" unique_id=1085976251]
-position = Vector2(873, 0)
-scale = Vector2(0.5315946, 0.4555085)
-texture = ExtResource("3_o0jdf")
+position = Vector2(378, 327.00003)
+scale = Vector2(1.9448785, 1.7978395)
+texture = ExtResource("4_mjpdh")
 
-[node name="ParallaxLayer5" type="ParallaxLayer" parent="." unique_id=44399323]
-motion_scale = Vector2(0.7, 0.7)
-motion_mirroring = Vector2(1024, 0)
+[node name="ParallaxLayer5" type="Parallax2D" parent="." unique_id=1951578751]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5" unique_id=396332674]
-position = Vector2(572.5, 695.5)
-scale = Vector2(11.223214, 4.4687495)
-texture = ExtResource("4_b2ebi")
+position = Vector2(87, 491)
+scale = Vector2(1.5468748, 1.0661414)
+texture = ExtResource("6_0iem8")
 
-[node name="ParallaxLayer6" type="ParallaxLayer" parent="." unique_id=2017422853]
-motion_mirroring = Vector2(1024, 0)
+[node name="ParallaxLayer6" type="Parallax2D" parent="." unique_id=1842708186]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer6" unique_id=68819195]
-position = Vector2(479.99997, 47)
-scale = Vector2(0.73713225, 0.64406776)
-texture = ExtResource("3_o0jdf")
-
-[node name="ParallaxLayer7" type="ParallaxLayer" parent="." unique_id=1961235555]
-motion_mirroring = Vector2(1024, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer7" unique_id=640501286]
-position = Vector2(572.3015, 1141.5)
-scale = Vector2(39.293655, 14.468757)
-texture = ExtResource("5_mjpdh")
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer6" unique_id=677856816]
+position = Vector2(264.0001, 1072.0002)
+scale = Vector2(39.808155, 25.940922)
+texture = ExtResource("6_h55ee")

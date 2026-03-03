@@ -1,33 +1,59 @@
 [gd_scene format=3 uid="uid://b56ulcklk5jqg"]
 
-[ext_resource type="Texture2D" uid="uid://cu6aiyyca1fgu" path="res://Cenário/sky.png" id="1_tqn5r"]
-[ext_resource type="Texture2D" uid="uid://gfjt23xe2n7a" path="res://Cenário/sea.png" id="2_xnbuh"]
-[ext_resource type="Texture2D" uid="uid://ct44st3wtsvj7" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Water.png" id="3_wtfu0"]
+[ext_resource type="Texture2D" uid="uid://d3tsx5cba078q" path="res://Fundos/Ocean_4/1.png" id="1_xnbuh"]
+[ext_resource type="Texture2D" uid="uid://dlax52xtsuddr" path="res://Fundos/Ocean_4/2.png" id="2_wtfu0"]
+[ext_resource type="Texture2D" uid="uid://bjrqtocc17syi" path="res://Fundos/Ocean_4/3.png" id="3_idkgj"]
+[ext_resource type="Texture2D" uid="uid://d0016n0xdjil7" path="res://Fundos/Ocean_4/4.png" id="4_8eq2k"]
+[ext_resource type="Texture2D" uid="uid://vyw3tyjicsli" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Sky.png" id="5_wtfu0"]
 
-[node name="Fundo" type="ParallaxBackground" unique_id=88567253]
+[node name="Fundo" type="Node2D" unique_id=890144321]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=976783630]
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(1024, 0)
+[node name="ParallaxLayer" type="Parallax2D" parent="." unique_id=1531200118]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=1017323603]
-position = Vector2(583.5, 45.5)
-scale = Vector2(11.419642, 1.2993422)
-texture = ExtResource("1_tqn5r")
+position = Vector2(697, 411.5)
+scale = Vector2(2.4201388, 2.5401235)
+texture = ExtResource("1_xnbuh")
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="." unique_id=12254016]
-motion_scale = Vector2(0.6, 0.6)
-motion_mirroring = Vector2(1024, 0)
+[node name="ParallaxLayer2" type="Parallax2D" parent="." unique_id=359226139]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2" unique_id=1058311363]
-position = Vector2(583.25, 404.5921)
-scale = Vector2(11.424107, 3.366502)
-texture = ExtResource("2_xnbuh")
+position = Vector2(696.99994, 326.5)
+scale = Vector2(2.4201386, 2.0154321)
+texture = ExtResource("2_wtfu0")
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="." unique_id=340031047]
-motion_mirroring = Vector2(1024, 0)
+[node name="ParallaxLayer3" type="Parallax2D" parent="." unique_id=1527295820]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3" unique_id=967589065]
-position = Vector2(581, 930)
-scale = Vector2(39.874996, 22.741503)
-texture = ExtResource("3_wtfu0")
+position = Vector2(697, 326.5)
+scale = Vector2(2.4201388, 2.0154321)
+texture = ExtResource("3_idkgj")
+
+[node name="ParallaxLayer4" type="Parallax2D" parent="." unique_id=181746347]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4" unique_id=919722667]
+position = Vector2(697, 326.50003)
+scale = Vector2(2.4201388, 2.0154321)
+texture = ExtResource("4_8eq2k")
+
+[node name="ParallaxLayer5" type="Parallax2D" parent="." unique_id=374118462]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5" unique_id=1414628300]
+position = Vector2(697, 1021)
+scale = Vector2(43.55382, 12.257715)
+texture = ExtResource("5_wtfu0")

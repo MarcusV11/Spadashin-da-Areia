@@ -116,18 +116,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("10_wnaaa"), ExtResource("11_p2obi"), ExtResource("12_4elbv"), ExtResource("13_4opsx"), ExtResource("14_4rby7"), ExtResource("15_2tswq"), ExtResource("16_gbv6c"), ExtResource("17_p7px6"), ExtResource("18_bua1g"), ExtResource("19_6vhv1"), ExtResource("20_n84bc"), ExtResource("21_pf0fb"), ExtResource("22_yspjo"), ExtResource("23_xkbfi"), ExtResource("24_1t3eo"), ExtResource("25_81vt4"), ExtResource("26_hc6el"), ExtResource("27_nls53"), ExtResource("28_r0ok5")]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = false
-tracks/1/path = NodePath("CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
 
 [sub_resource type="Animation" id="Animation_43wpt"]
 resource_name = "fall"

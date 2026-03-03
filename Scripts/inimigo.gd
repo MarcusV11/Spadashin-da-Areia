@@ -1,48 +1,38 @@
 extends CharacterBody2D
-
-
 const SPEED = 500.0
 const vida_max = 10
 const DANO = 1
-
-
 @onready var animation: AnimationPlayer = $Animation
 @onready var ray: RayCast2D = $Ray
 @onready var collision: CollisionShape2D = $AttackArea/Collision
 @onready var barra_de_vida: ProgressBar = $ProgressBar
-
 @export var knockback_duration = 0.2
 @export var knockback_strength = 100.0
-
 var knockback_velocity = Vector2.ZERO
 var knockback_timer = 0.0
-
-
-
 var target: Node2D = null
 var atacando: bool
 var vida: int = vida_max
 var is_dead: bool = false
 var levando_hit : bool = false
-
 @export var direction := -10
 
 func _ready():
 	barra_de_vida.max_value = vida_max
 	barra_de_vida.value = vida
 
-
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
 
 func _physics_process(delta):
 	if is_dead:
 		return
+	if atacando and target and not levando_hit:
+		if animation.current_animation != "attack":
+			animation.play("attack")
 	if levando_hit:
 		velocity.x *= 0.5
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	# aplica knockback se estiver ativo
 	if knockback_timer > 0.0:
 		velocity.x = knockback_velocity.x
 		velocity.y = knockback_velocity.y
@@ -64,8 +54,9 @@ func flip():
 	if velocity.x < 0:
 		$Sprite2D.flip_h = true
 
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	if is_dead:
+		return
 	if body.is_in_group("player"):
 		target = body
 		atacando = true
@@ -75,13 +66,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, knockback_strength)
 
-
 func apply_knockback(direction: Vector2, strength: float):
 	knockback_velocity = direction * strength
 	knockback_timer = knockback_duration
 
-
 func _on_area_2d_body_exited(body: Node2D) -> void:
+	if is_dead:
+		return
 	if body.is_in_group("player"):
 		target = null
 		atacando = false
@@ -89,9 +80,9 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		$DamageTimer.stop()
 
 func _on_damage_timer_timeout():
-	if target and not target.is_dead:
+	if target and not target.is_dead and atacando:
 		target.take_damage(DANO)
-
+		$DamageTimer.start()
 
 func _on_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "death":
@@ -107,7 +98,6 @@ func _on_animation_finished(anim_name: StringName) -> void:
 			animation.play("attack")
 		else:
 			animation.play("run")
-
 
 func take_damage(amount: int):
 	if is_dead:
@@ -125,4 +115,8 @@ func die():
 		return
 	is_dead = true
 	velocity = Vector2.ZERO
+	atacando = false
+	target = null
+	$DamageTimer.stop()
+	$AttackArea/Collision.set_deferred("disabled", true)
 	animation.play("death")

@@ -161,6 +161,8 @@ func apply_knockback(direction: Vector2, strength: float):
 func die():
 	is_dead = true
 	velocity = Vector2.ZERO
+	set_collision_layer_value(1, false)
+	set_collision_mask_value(2, false)
 	animation.play("death")
 	GameState.vida = vida_max
 	GameState.moedas = 0
