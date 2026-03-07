@@ -119,6 +119,9 @@ func gravidade(delta: float):
 func jump():
 	velocity.y = -jump_velocity
 
+
+
+
 func ataque():
 	if atacando or is_dead:
 		return
@@ -126,13 +129,23 @@ func ataque():
 	animation.play("attack")
 	if detected_barril:
 		roll_barril(detected_barril)
+	await get_tree().create_timer(0.2).timeout 
+	aplicar_dano_ataque()
 	await animation.animation_finished
 	atacando = false
+
+
+
+
 
 func roll_barril(barril):
 	var roll_direction = Vector2(1, 0) if not $Sprite2D.flip_h else Vector2(-1, 0)
 	barril.direction = roll_direction
 	barril.rolando()
+
+
+
+
 
 func _on_animation_finished(anim_name):
 	if anim_name == "attack":
@@ -141,6 +154,10 @@ func _on_animation_finished(anim_name):
 		timer.start()
 	if anim_name == "hit":
 		levando_hit = false
+
+
+
+
 
 func take_damage(amount: int):
 	if is_dead:
@@ -154,9 +171,17 @@ func take_damage(amount: int):
 		levando_hit = true
 		animation.play("hit")
 
+
+
+
+
 func apply_knockback(direction: Vector2, strength: float):
 	knockback_velocity = direction * strength
 	knockback_timer = knockback_duration
+
+
+
+
 
 func die():
 	is_dead = true
@@ -169,18 +194,46 @@ func die():
 	GameState.chave_coletada = false
 	GameState.pode_atirar = false
 
+
+
+
+
 func _on_attack_area_body_entered(body):
 	if body.is_in_group("inimigo") and atacando:
 		body.take_damage(dano)
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, 300.0)
 
+
+
+
+
+func aplicar_dano_ataque():
+	var bodies = attack_area.get_overlapping_bodies()
+	for body in bodies:
+		if body.is_in_group("inimigo"):
+			body.take_damage(dano)
+			var knockback_direction = (body.global_position - global_position).normalized()
+			body.apply_knockback(knockback_direction, 300.0)
+
+
+
+
+
+
 func _on_timer_timeout() -> void:
 	get_tree().reload_current_scene()
+
+
+
 
 func _on_Barril_detector_body_entered(body: Node2D) -> void:
 	if body.is_in_group("barril"):
 		detected_barril = body
+
+
+
+
 
 func _on_Barril_detector_body_exited(body: Node2D) -> void:
 	if body.is_in_group("barril"):
@@ -207,13 +260,21 @@ func get_fruit():
 	boost_timer.wait_time = boost_duration
 	boost_timer.start()
 
+
+
+
+
 func _on_boost_timer_timeout() -> void:
 	speed = speed_original
 	dano = dano_original
 
+
+
 func desbloquear_tiro():
 	pode_atirar = true
 	GameState.pode_atirar = true 
+
+
 
 func disparar():
 	if not pode_atirar:

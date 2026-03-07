@@ -156,7 +156,7 @@ _data = {
 size = Vector2(33, 10)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwuxf"]
-bg_color = Color(1.0662901, 0.05347161, 0, 1)
+bg_color = Color(0.76862746, 0, 0.101960786, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xu6nh"]
 bg_color = Color(0.15294118, 1, 0.24705882, 1)

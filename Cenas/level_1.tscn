@@ -6,15 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://2i52nskrm8nk" path="res://Cenas/Decoração/palmeira.tscn" id="4_mmet4"]
 [ext_resource type="PackedScene" uid="uid://cwxp88liacimk" path="res://Cenas/Decoração/palmeira_direita.tscn" id="5_57qif"]
 [ext_resource type="PackedScene" uid="uid://cppm8salt8vpc" path="res://Cenas/Decoração/palmeira_esquerda.tscn" id="6_7d63f"]
+[ext_resource type="PackedScene" uid="uid://dxvabflralebr" path="res://Cenas/bandido.tscn" id="6_p5rkp"]
+[ext_resource type="PackedScene" uid="uid://cg7s8p5j6mqr6" path="res://Cenas/bandido_z.tscn" id="7_6prxd"]
 [ext_resource type="PackedScene" uid="uid://crc4roy31afr8" path="res://Cenas/Decoração/bandeira.tscn" id="7_57qif"]
 [ext_resource type="PackedScene" uid="uid://dii75cqllhl5a" path="res://Cenas/Decoração/plataforma.tscn" id="8_7d63f"]
-[ext_resource type="PackedScene" uid="uid://cbpw6qwsx4qai" path="res://Cenas/inimigo.tscn" id="9_ge26e"]
 [ext_resource type="PackedScene" uid="uid://drne3rpt68sjj" path="res://Cenas/espinho.tscn" id="10_0vnop"]
 [ext_resource type="PackedScene" uid="uid://cx0ks5bv8phpc" path="res://Cenas/Decoração/barril.tscn" id="11_jdpfv"]
 [ext_resource type="PackedScene" uid="uid://d3ti0kqmu1bje" path="res://Cenas/moeda.tscn" id="11_sa61h"]
 [ext_resource type="PackedScene" uid="uid://cbta2uvaqnsto" path="res://Cenas/baú.tscn" id="12_6uhnw"]
 [ext_resource type="PackedScene" uid="uid://b63jrgvj6hfye" path="res://Cenas/Decoração/corrimão.tscn" id="13_e2gnu"]
-[ext_resource type="PackedScene" uid="uid://cnr5h8jcuxxow" path="res://Cenas/Golem.tscn" id="14_grajh"]
 [ext_resource type="PackedScene" uid="uid://bnt2gan721t5p" path="res://Cenas/portal.tscn" id="16_m8kol"]
 [ext_resource type="PackedScene" uid="uid://b87pw1ighx5fr" path="res://Cenas/chave.tscn" id="17_vh6tk"]
 [ext_resource type="PackedScene" uid="uid://cx5pj8l4dkjfr" path="res://Cenas/melancia.tscn" id="18_sfbdd"]
@@ -428,44 +428,53 @@ tile_set = SubResource("TileSet_qd5lc")
 
 [node name="Inimigos" type="Node2D" parent="." unique_id=1290428215]
 
-[node name="Inimigo" parent="Inimigos" unique_id=1088291258 instance=ExtResource("9_ge26e")]
-position = Vector2(1914, 435)
+[node name="Bandido" parent="Inimigos" unique_id=73402069 instance=ExtResource("6_p5rkp")]
+z_index = 5
+position = Vector2(205, 519)
 
-[node name="Inimigo2" parent="Inimigos" unique_id=327408245 instance=ExtResource("9_ge26e")]
-position = Vector2(767, 1040)
+[node name="Bandido2" parent="Inimigos" unique_id=1872453583 instance=ExtResource("6_p5rkp")]
+z_index = 5
+position = Vector2(1868, 427)
 
-[node name="Inimigo3" parent="Inimigos" unique_id=1126940758 instance=ExtResource("9_ge26e")]
-position = Vector2(1698, 1045)
+[node name="Bandido3" parent="Inimigos" unique_id=134026235 instance=ExtResource("6_p5rkp")]
+z_index = 5
+position = Vector2(1181, 678)
 
-[node name="Inimigo6" parent="Inimigos" unique_id=1089285852 instance=ExtResource("9_ge26e")]
-position = Vector2(1285, 847)
+[node name="Bandido4" parent="Inimigos" unique_id=581616149 instance=ExtResource("6_p5rkp")]
+z_index = 5
+position = Vector2(1234, 840)
 
-[node name="Inimigo4" parent="Inimigos" unique_id=928373205 instance=ExtResource("9_ge26e")]
-position = Vector2(1249, 692)
+[node name="Bandido5" parent="Inimigos" unique_id=1974511861 instance=ExtResource("6_p5rkp")]
+z_index = 5
+position = Vector2(1621, 1023)
 
-[node name="Inimigo5" parent="Inimigos" unique_id=2032982354 instance=ExtResource("9_ge26e")]
-position = Vector2(280, 496)
+[node name="Bandido6" parent="Inimigos" unique_id=1387034564 instance=ExtResource("6_p5rkp")]
+z_index = 5
+position = Vector2(861, 1036)
 
-[node name="Golem" parent="Inimigos" unique_id=1547140875 instance=ExtResource("14_grajh")]
-position = Vector2(1468, 650)
+[node name="BandidoZ" parent="Inimigos" unique_id=880782342 instance=ExtResource("7_6prxd")]
+z_index = 5
+position = Vector2(1521, 421)
 
-[node name="Golem2" parent="Inimigos" unique_id=264995891 instance=ExtResource("14_grajh")]
-position = Vector2(1381, 1029)
+[node name="BandidoZ2" parent="Inimigos" unique_id=950674107 instance=ExtResource("7_6prxd")]
+z_index = 5
+position = Vector2(1698, 420)
 
-[node name="Golem3" parent="Inimigos" unique_id=284074929 instance=ExtResource("14_grajh")]
-position = Vector2(554, 1029)
+[node name="BandidoZ3" parent="Inimigos" unique_id=1304926537 instance=ExtResource("7_6prxd")]
+z_index = 5
+position = Vector2(1396, 675)
 
-[node name="Golem4" parent="Inimigos" unique_id=1596747323 instance=ExtResource("14_grajh")]
-position = Vector2(1646, 812)
+[node name="BandidoZ4" parent="Inimigos" unique_id=532248111 instance=ExtResource("7_6prxd")]
+z_index = 5
+position = Vector2(1143, 839)
 
-[node name="Golem7" parent="Inimigos" unique_id=1383683104 instance=ExtResource("14_grajh")]
-position = Vector2(1086, 842)
+[node name="BandidoZ5" parent="Inimigos" unique_id=1569311596 instance=ExtResource("7_6prxd")]
+z_index = 5
+position = Vector2(664, 1025)
 
-[node name="Golem5" parent="Inimigos" unique_id=308131687 instance=ExtResource("14_grajh")]
-position = Vector2(1734, 427)
-
-[node name="Golem6" parent="Inimigos" unique_id=217983956 instance=ExtResource("14_grajh")]
-position = Vector2(1597, 432)
+[node name="BandidoZ6" parent="Inimigos" unique_id=1927706180 instance=ExtResource("7_6prxd")]
+z_index = 5
+position = Vector2(1481, 1023)
 
 [node name="Decoração" type="Node2D" parent="." unique_id=1704933901]
 
