@@ -148,6 +148,7 @@ font_size = 10
 shadow_color = Color(0, 0, 0, 1)
 
 [node name="Vendedor" type="Node2D" unique_id=31035721]
+scale = Vector2(0.7600008, 0.6800002)
 script = ExtResource("1_gdevl")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1474963693]
@@ -168,18 +169,18 @@ offset_bottom = -71.0
 label_settings = SubResource("LabelSettings_gdevl")
 
 [node name="Melancia" type="TextureButton" parent="." unique_id=772823381]
-offset_left = -67.0
-offset_top = -78.0
-offset_right = -27.0
-offset_bottom = -38.0
+offset_left = -46.05258
+offset_top = -70.58821
+offset_right = -14.052582
+offset_bottom = -36.529404
 texture_normal = ExtResource("33_3s73y")
 stretch_mode = 4
 
 [node name="Tiro" type="TextureButton" parent="." unique_id=512600377]
-offset_left = 21.0
-offset_top = -78.0
-offset_right = 61.0
-offset_bottom = -38.0
+offset_left = 7.8947287
+offset_top = -72.05881
+offset_right = 47.89473
+offset_bottom = -37.941154
 texture_normal = ExtResource("35_tg7sk")
 stretch_mode = 5
 
