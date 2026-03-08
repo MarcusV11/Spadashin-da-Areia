@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 500.0
 const vida_max = 15
-const DANO = 3
+const DANO = 4
 
 
 
@@ -66,11 +66,10 @@ func _physics_process(delta):
 func flip():
 	if velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
-		$AttackArea.position.x = -abs($AttackArea.position.x)
+		$AttackArea.position.x = abs($AttackArea.position.x)
 	if velocity.x < 0:
 		$AnimatedSprite2D.flip_h = true
-		$AttackArea.position.x = abs($AttackArea.position.x)
-
+		$AttackArea.position.x = -abs($AttackArea.position.x)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if is_dead:
@@ -88,7 +87,7 @@ func _on_animation_frame_changed() -> void:
 	if not is_instance_valid(animated_sprite_2d):
 		return
 	if animated_sprite_2d.animation == "attack":
-		if animated_sprite_2d.frame == 4:
+		if animated_sprite_2d.frame == 6:
 			if target and atacando:
 				target.take_damage(DANO)
 				var knockback_direction = (target.global_position - global_position).normalized()

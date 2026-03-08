@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://csutjqyocpw6i"]
 
 [ext_resource type="PackedScene" uid="uid://qdheatfnvbrl" path="res://Cenas/player.tscn" id="1_yui43"]
-[ext_resource type="PackedScene" uid="uid://cg7s8p5j6mqr6" path="res://Cenas/bandido_z.tscn" id="3_4o71l"]
+[ext_resource type="PackedScene" uid="uid://co3am27kuhllh" path="res://Cenas/esqueleto.tscn" id="3_qw0im"]
 [ext_resource type="Texture2D" uid="uid://djvgokpc4pal6" path="res://Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="4_atywy"]
 [ext_resource type="PackedScene" uid="uid://d3nkdrbjl6u5f" path="res://Cenas/fundo_3.tscn" id="5_wrraf"]
 [ext_resource type="PackedScene" uid="uid://dii75cqllhl5a" path="res://Cenas/Decoração/plataforma.tscn" id="6_rh0yu"]
@@ -422,29 +422,26 @@ tile_set = SubResource("TileSet_lenkr")
 
 [node name="Inimigos" type="Node2D" parent="." unique_id=746767067]
 
-[node name="BandidoZ" parent="Inimigos" unique_id=880782342 instance=ExtResource("3_4o71l")]
-position = Vector2(260, 389)
+[node name="Esqueleto" parent="Inimigos" unique_id=136835232 instance=ExtResource("3_qw0im")]
+position = Vector2(-75, 645)
 
-[node name="BandidoZ2" parent="Inimigos" unique_id=920629567 instance=ExtResource("3_4o71l")]
-position = Vector2(304, 646)
+[node name="Esqueleto2" parent="Inimigos" unique_id=889665954 instance=ExtResource("3_qw0im")]
+position = Vector2(253, 652)
 
-[node name="BandidoZ3" parent="Inimigos" unique_id=395081539 instance=ExtResource("3_4o71l")]
-position = Vector2(-2, 645)
+[node name="Esqueleto3" parent="Inimigos" unique_id=923327909 instance=ExtResource("3_qw0im")]
+position = Vector2(1027, 678)
 
-[node name="BandidoZ4" parent="Inimigos" unique_id=206461311 instance=ExtResource("3_4o71l")]
-position = Vector2(1291, 675)
+[node name="Esqueleto4" parent="Inimigos" unique_id=1848461738 instance=ExtResource("3_qw0im")]
+position = Vector2(1233.9999, 683)
 
-[node name="BandidoZ5" parent="Inimigos" unique_id=1668056161 instance=ExtResource("3_4o71l")]
-position = Vector2(822, 323)
+[node name="Esqueleto5" parent="Inimigos" unique_id=577714034 instance=ExtResource("3_qw0im")]
+position = Vector2(868, 331)
 
-[node name="BandidoZ6" parent="Inimigos" unique_id=1956998339 instance=ExtResource("3_4o71l")]
-position = Vector2(935, 678)
+[node name="Esqueleto6" parent="Inimigos" unique_id=165300852 instance=ExtResource("3_qw0im")]
+position = Vector2(1682, 329)
 
-[node name="BandidoZ7" parent="Inimigos" unique_id=268512488 instance=ExtResource("3_4o71l")]
-position = Vector2(2073, 323)
-
-[node name="BandidoZ8" parent="Inimigos" unique_id=1833782656 instance=ExtResource("3_4o71l")]
-position = Vector2(1828, 316)
+[node name="Esqueleto7" parent="Inimigos" unique_id=953471750 instance=ExtResource("3_qw0im")]
+position = Vector2(2094, 329)
 
 [node name="Fundo 3" parent="." unique_id=506083069 instance=ExtResource("5_wrraf")]
 

@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://d0wcpb1gnhfy"]
 
 [ext_resource type="PackedScene" uid="uid://qdheatfnvbrl" path="res://Cenas/player.tscn" id="1_k8pka"]
-[ext_resource type="PackedScene" uid="uid://dxvabflralebr" path="res://Cenas/bandido.tscn" id="1_wq7tl"]
 [ext_resource type="PackedScene" uid="uid://cg7s8p5j6mqr6" path="res://Cenas/bandido_z.tscn" id="2_bxut3"]
+[ext_resource type="PackedScene" uid="uid://co3am27kuhllh" path="res://Cenas/esqueleto.tscn" id="2_wq7tl"]
 [ext_resource type="Texture2D" uid="uid://djvgokpc4pal6" path="res://Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="4_7012m"]
 [ext_resource type="PackedScene" uid="uid://crc4roy31afr8" path="res://Cenas/Decoração/bandeira.tscn" id="5_yavqd"]
 [ext_resource type="PackedScene" uid="uid://cx0ks5bv8phpc" path="res://Cenas/Decoração/barril.tscn" id="6_jyyts"]
@@ -425,44 +425,41 @@ sources/2 = SubResource("TileSetAtlasSource_tltss")
 
 [node name="inimigos" type="Node2D" parent="." unique_id=1387553313]
 
-[node name="Bandido" parent="inimigos" unique_id=73402069 instance=ExtResource("1_wq7tl")]
-position = Vector2(1053, 519)
-
-[node name="Bandido2" parent="inimigos" unique_id=1233145498 instance=ExtResource("1_wq7tl")]
-position = Vector2(863, 521)
-
-[node name="Bandido3" parent="inimigos" unique_id=1658952202 instance=ExtResource("1_wq7tl")]
-position = Vector2(994, 743)
-
-[node name="Bandido4" parent="inimigos" unique_id=6878107 instance=ExtResource("1_wq7tl")]
-position = Vector2(1586, 898)
-
-[node name="Bandido5" parent="inimigos" unique_id=1186962886 instance=ExtResource("1_wq7tl")]
-position = Vector2(1853, 737)
-
-[node name="Bandido6" parent="inimigos" unique_id=671553984 instance=ExtResource("1_wq7tl")]
-position = Vector2(1487, 740)
-
-[node name="Bandido7" parent="inimigos" unique_id=1408115158 instance=ExtResource("1_wq7tl")]
-position = Vector2(2252, 678)
-
 [node name="BandidoZ" parent="inimigos" unique_id=880782342 instance=ExtResource("2_bxut3")]
-position = Vector2(965, 510)
+position = Vector2(959, 518)
 
 [node name="BandidoZ2" parent="inimigos" unique_id=236295145 instance=ExtResource("2_bxut3")]
 position = Vector2(866, 742)
 
 [node name="BandidoZ3" parent="inimigos" unique_id=937707832 instance=ExtResource("2_bxut3")]
-position = Vector2(1608, 729)
+position = Vector2(1604, 743)
 
 [node name="BandidoZ4" parent="inimigos" unique_id=2028608991 instance=ExtResource("2_bxut3")]
-position = Vector2(1694, 739)
+position = Vector2(1695, 742)
 
 [node name="BandidoZ5" parent="inimigos" unique_id=943621497 instance=ExtResource("2_bxut3")]
-position = Vector2(1326, 883)
+position = Vector2(1326, 903)
 
 [node name="BandidoZ6" parent="inimigos" unique_id=289376441 instance=ExtResource("2_bxut3")]
-position = Vector2(2333, 671)
+position = Vector2(2334, 676)
+
+[node name="Esqueleto" parent="inimigos" unique_id=136835232 instance=ExtResource("2_wq7tl")]
+position = Vector2(820, 524)
+
+[node name="Esqueleto2" parent="inimigos" unique_id=104696396 instance=ExtResource("2_wq7tl")]
+position = Vector2(990.99994, 748)
+
+[node name="Esqueleto3" parent="inimigos" unique_id=1112986655 instance=ExtResource("2_wq7tl")]
+position = Vector2(1089, 906)
+
+[node name="Esqueleto4" parent="inimigos" unique_id=240024030 instance=ExtResource("2_wq7tl")]
+position = Vector2(1474, 748)
+
+[node name="Esqueleto5" parent="inimigos" unique_id=961722663 instance=ExtResource("2_wq7tl")]
+position = Vector2(1733, 748)
+
+[node name="Esqueleto6" parent="inimigos" unique_id=131041299 instance=ExtResource("2_wq7tl")]
+position = Vector2(2224, 681)
 
 [node name="Decoração" type="Node2D" parent="." unique_id=157464179]
 

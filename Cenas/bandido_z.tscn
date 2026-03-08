@@ -153,7 +153,7 @@ shape = SubResource("RectangleShape2D_gp7vf")
 position = Vector2(0, 4.7683716e-07)
 scale = Vector2(1.1041666, 1.2083334)
 sprite_frames = SubResource("SpriteFrames_7qj5j")
-animation = &"death"
+animation = &"idle"
 autoplay = "run"
 
 [node name="Ray" type="RayCast2D" parent="." unique_id=1937538165]
