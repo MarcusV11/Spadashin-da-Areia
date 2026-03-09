@@ -135,7 +135,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -152,7 +152,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -169,7 +169,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"hit",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -186,7 +186,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"idle",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -203,7 +203,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 14.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hbx5m"]
@@ -214,7 +214,7 @@ height = 47.4834
 bg_color = Color(1, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwsu7"]
-bg_color = Color(0.15294118, 0.6392157, 0.24705882, 1)
+bg_color = Color(0.15294118, 1, 0.24705882, 1)
 
 [node name="Esqueleto" type="CharacterBody2D" unique_id=136835232 groups=["inimigo"]]
 scale = Vector2(0.9599998, 0.7999997)
@@ -228,7 +228,7 @@ shape = SubResource("RectangleShape2D_p8wnf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=629317010]
 sprite_frames = SubResource("SpriteFrames_jxk82")
-animation = &"attack"
+animation = &"run"
 autoplay = "run"
 
 [node name="Ray" type="RayCast2D" parent="." unique_id=403738053]
@@ -248,9 +248,9 @@ debug_color = Color(0.8854549, 0.32427558, 0.19456804, 0.41960785)
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=48918164]
 offset_left = -12.0
-offset_top = -31.0
+offset_top = -33.750008
 offset_right = 24.0
-offset_bottom = -26.0
+offset_bottom = -25.999998
 theme_override_styles/background = SubResource("StyleBoxFlat_gbt3f")
 theme_override_styles/fill = SubResource("StyleBoxFlat_uwsu7")
 max_value = 10.0

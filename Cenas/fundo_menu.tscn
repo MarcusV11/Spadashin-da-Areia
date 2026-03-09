@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://chk6lfcnq5dp5"]
+
+[ext_resource type="Texture2D" uid="uid://dovy22qywrt5o" path="res://Fundos/Ocean_3/1.png" id="1_glnr8"]
+[ext_resource type="Texture2D" uid="uid://chv04m73nema0" path="res://Fundos/Ocean_3/2.png" id="2_c5qae"]
+[ext_resource type="Texture2D" uid="uid://ddccf0n8ce0lu" path="res://Fundos/Ocean_3/3.png" id="3_gwitk"]
+[ext_resource type="Texture2D" uid="uid://vxkcahsgvq0r" path="res://Fundos/Ocean_3/4.png" id="4_dcgit"]
+
+[node name="Fundo Menu" type="Node2D" unique_id=1992240818]
+position = Vector2(67, 27)
+scale = Vector2(0.8400006, 0.76000077)
+
+[node name="ParallaxLayer" type="Parallax2D" parent="." unique_id=1700035795]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=157657692]
+position = Vector2(611.8096, 373.55267)
+scale = Vector2(2.3930223, 2.5089345)
+texture = ExtResource("1_glnr8")
+
+[node name="ParallaxLayer2" type="Parallax2D" parent="." unique_id=259746740]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2" unique_id=1082090258]
+position = Vector2(611.8096, 390.55264)
+scale = Vector2(2.3930223, 2.6138725)
+texture = ExtResource("2_c5qae")
+
+[node name="ParallaxLayer3" type="Parallax2D" parent="." unique_id=2134666088]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3" unique_id=1980586359]
+position = Vector2(611.8096, 390.55264)
+scale = Vector2(2.3930223, 2.6138725)
+texture = ExtResource("3_gwitk")
+
+[node name="ParallaxLayer4" type="Parallax2D" parent="." unique_id=1380262781]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4" unique_id=1131640195]
+position = Vector2(611.8096, 390.55264)
+scale = Vector2(2.3930223, 2.6138725)
+texture = ExtResource("4_dcgit")

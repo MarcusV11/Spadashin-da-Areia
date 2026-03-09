@@ -465,10 +465,6 @@ position = Vector2(2822, 728)
 position = Vector2(2729, 588.25)
 scale = Vector2(5.65625, 5.6640625)
 
-[node name="Palmeira7" parent="Decoração/Palmeiras" unique_id=1590902000 instance=ExtResource("8_wrraf")]
-position = Vector2(1715.0001, 646)
-scale = Vector2(1.1093751, 0.9863277)
-
 [node name="Palmeira direita2" parent="Decoração/Palmeiras" unique_id=799068479 instance=ExtResource("7_1antt")]
 position = Vector2(1458.75, 250.75)
 scale = Vector2(1.382353, 1.1037736)

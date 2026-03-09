@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 500.0
+const SPEED = 650.0
 const vida_max = 15
 const DANO = 4
 
@@ -25,7 +25,7 @@ var levando_hit : bool = false
 
 
 
-@export var direction := -10
+@export var direction := 10
 
 
 func _ready():
@@ -65,11 +65,12 @@ func _physics_process(delta):
 
 func flip():
 	if velocity.x > 0:
-		$AnimatedSprite2D.flip_h = false
-		$AttackArea.position.x = abs($AttackArea.position.x)
-	if velocity.x < 0:
 		$AnimatedSprite2D.flip_h = true
 		$AttackArea.position.x = -abs($AttackArea.position.x)
+	if velocity.x < 0:
+		$AnimatedSprite2D.flip_h = false
+		$AttackArea.position.x = abs($AttackArea.position.x)
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if is_dead:
@@ -78,7 +79,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		target = body
 		atacando = true
 		animated_sprite_2d.play("attack")
-		$DamageTimer.start()
+
 
 
 
@@ -107,7 +108,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		target = null
 		atacando = false
 		animated_sprite_2d.play("run")
-		$DamageTimer.stop()
+
 
 
 func _on_damage_timer_timeout():

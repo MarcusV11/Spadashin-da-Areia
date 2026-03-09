@@ -1,18 +1,12 @@
 [gd_scene format=3 uid="uid://dktwo4wnopll6"]
 
 [ext_resource type="Script" uid="uid://dvawhcjr18prr" path="res://Scripts/menu.gd" id="1_pveh2"]
-[ext_resource type="Texture2D" uid="uid://cu6aiyyca1fgu" path="res://Cenário/sky.png" id="2_vpgfy"]
-[ext_resource type="Texture2D" uid="uid://gfjt23xe2n7a" path="res://Cenário/sea.png" id="3_eheat"]
-[ext_resource type="Texture2D" uid="uid://tavqgsb56dn4" path="res://Cenário/far-grounds.png" id="4_fapvr"]
-[ext_resource type="Texture2D" uid="uid://ct44st3wtsvj7" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Additional Water.png" id="5_kdsmm"]
+[ext_resource type="PackedScene" uid="uid://chk6lfcnq5dp5" path="res://Cenas/fundo_menu.tscn" id="2_u1n12"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_u1n12"]
 font_size = 64
 shadow_size = 13
 shadow_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_vpgfy"]
-font_size = 32
 
 [node name="Menu" type="Node2D" unique_id=1688612661]
 script = ExtResource("1_pveh2")
@@ -20,20 +14,15 @@ script = ExtResource("1_pveh2")
 [node name="Hud" type="CanvasLayer" parent="." unique_id=1178888716]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Hud" unique_id=1741754453]
-offset_left = 103.0
-offset_top = 349.0
-offset_right = 224.0
-offset_bottom = 450.0
+offset_left = 490.0
+offset_top = 368.0
+offset_right = 611.0
+offset_bottom = 469.0
 
 [node name="INICIAR" type="Button" parent="Hud/VBoxContainer" unique_id=720646219]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "INICIAR"
-
-[node name="FASE" type="Button" parent="Hud/VBoxContainer" unique_id=358091464]
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "FASE"
 
 [node name="SAIR" type="Button" parent="Hud/VBoxContainer" unique_id=1409909976]
 layout_mode = 2
@@ -56,46 +45,7 @@ text = "SPADASHIN DA AREIA
 "
 label_settings = SubResource("LabelSettings_u1n12")
 
-[node name="MENU" type="Label" parent="Hud" unique_id=150192687]
-offset_left = 131.0
-offset_top = 300.0
-offset_right = 180.0
-offset_bottom = 323.0
-text = "MENU"
-label_settings = SubResource("LabelSettings_vpgfy")
-
-[node name="ambiente" type="Node2D" parent="." unique_id=860860415]
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="ambiente" unique_id=1901320281]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ambiente/ParallaxBackground" unique_id=1591972014]
-
-[node name="Sprite2D" type="Sprite2D" parent="ambiente/ParallaxBackground/ParallaxLayer" unique_id=1398080091]
-position = Vector2(567.5, 0)
-scale = Vector2(11.133928, 1)
-texture = ExtResource("2_vpgfy")
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ambiente/ParallaxBackground" unique_id=934589329]
-
-[node name="Sprite2D" type="Sprite2D" parent="ambiente/ParallaxBackground/ParallaxLayer2" unique_id=1868098633]
-position = Vector2(567.75, 350.5)
-scale = Vector2(11.1383915, 4.197917)
-texture = ExtResource("3_eheat")
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ambiente/ParallaxBackground" unique_id=1138987444]
-
-[node name="Sprite2D" type="Sprite2D" parent="ambiente/ParallaxBackground/ParallaxLayer3" unique_id=914625656]
-position = Vector2(564.00006, 162.25)
-scale = Vector2(2.0243506, 1.3227274)
-texture = ExtResource("4_fapvr")
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ambiente/ParallaxBackground" unique_id=281390586]
-
-[node name="Sprite2D" type="Sprite2D" parent="ambiente/ParallaxBackground/ParallaxLayer4" unique_id=898410138]
-position = Vector2(568.74084, 654)
-scale = Vector2(38.9537, 6.374998)
-texture = ExtResource("5_kdsmm")
+[node name="Fundo Menu" parent="." unique_id=1992240818 instance=ExtResource("2_u1n12")]
 
 [connection signal="pressed" from="Hud/VBoxContainer/INICIAR" to="." method="_on_iniciar_pressed"]
-[connection signal="pressed" from="Hud/VBoxContainer/FASE" to="." method="_on_fase_pressed"]
 [connection signal="pressed" from="Hud/VBoxContainer/SAIR" to="." method="_on_sair_pressed"]

@@ -430,7 +430,7 @@ tile_set = SubResource("TileSet_qd5lc")
 
 [node name="Bandido" parent="Inimigos" unique_id=73402069 instance=ExtResource("6_p5rkp")]
 z_index = 5
-position = Vector2(205, 519)
+position = Vector2(283, 489)
 
 [node name="Bandido2" parent="Inimigos" unique_id=1872453583 instance=ExtResource("6_p5rkp")]
 z_index = 5
@@ -589,7 +589,7 @@ position = Vector2(2036, 821)
 [node name="Baús" type="Node2D" parent="Decoração" unique_id=302448949]
 
 [node name="Baú" parent="Decoração/Baús" unique_id=1415778329 instance=ExtResource("12_6uhnw")]
-position = Vector2(1865, 655)
+position = Vector2(1071, 847)
 
 [node name="Baú2" parent="Decoração/Baús" unique_id=202130451 instance=ExtResource("12_6uhnw")]
 position = Vector2(228, 1040)
